@@ -35,10 +35,11 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="center"
+        android:background="@drawable/enter_num_box_frame"
         android:layout_marginTop="20dp"
         android:entries="@array/Languages"/>
 

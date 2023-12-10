@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/languageFragment">
+
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.example.liveasy.fragments.LanguageFragment"
+        android:label="LanguageFragment"
+        tools:layout="@layout/fragment_language">
+        <action
+            android:id="@+id/action_languageFragment_to_mobileFragment"
+            app:destination="@id/mobileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mobileFragment"
+        android:name="com.example.liveasy.fragments.MobileFragment"
+        android:label="MobileFragment"
+        tools:layout="@layout/fragment_mobile">
+        <action
+            android:id="@+id/action_mobileFragment_to_verifyFragment3"
+            app:destination="@id/verifyFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyFragment3"
+        android:name="com.example.liveasy.fragments.VerifyFragment"
+        android:label="VerifyFragment"
+        tools:layout="@layout/fragment_verify_page">
+        <action
+            android:id="@+id/action_verifyFragment3_to_profileSelectFragment"
+            app:destination="@id/profileSelectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileSelectFragment"
+        android:name="com.example.liveasy.fragments.ProfileSelectFragment"
+        android:label="ProfileSelectFragment"
+        tools:layout="@layout/profile_select_fragment"/>
+</navigation>

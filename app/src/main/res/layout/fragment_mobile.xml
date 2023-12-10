@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Enter Your Mobile Number"
+        android:layout_gravity="center"
+        android:layout_marginTop="130dp"
+        android:gravity="center"
+        android:textSize="22dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/changelang"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:text="You'll recive 4 digit code to verify next"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+       android:background="@drawable/enter_num_box_frame" >
+
+
+
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/country_code"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_defaultNameCode="IND"
+        app:ccp_showFlag="true"
+
+        app:ccp_showNameCode="true"
+         android:layout_weight="0.5"
+        />
+
+    <EditText
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:hint="Mobile Number"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="left"
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:inputType="phone" />
+</LinearLayout>
+    
+    <Button
+        android:id="@+id/contbtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="CONTINUE"
+        android:layout_gravity="center"
+        android:background="@drawable/rectangle_shape"
+        android:layout_marginTop="23dp"
+
+
+        />
+
+
+
+
+</LinearLayout>

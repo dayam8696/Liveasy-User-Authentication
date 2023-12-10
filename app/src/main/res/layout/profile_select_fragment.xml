@@ -33,13 +33,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
-
-
-            />
+            android:checked="true" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:src="@drawable/profile_select" />
 
 
@@ -52,6 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
                 android:text="Shipper"
                 android:textSize="28dp" />
 
@@ -62,7 +62,10 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="2dp"
                 android:gravity="left"
-                android:text="Lorem ipsum dolor sit amet,consectetur adipiscing" />
+                android:text="Lorem ipsum dolor sit amet,consectetur adipiscing"
+                android:layout_marginBottom="20dp"
+
+                />
 
 
         </LinearLayout>
@@ -92,7 +95,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/profile_select" />
+            android:layout_marginTop="20dp"
+            android:src="@drawable/truck" />
 
 
         <LinearLayout
@@ -103,6 +107,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
                 android:text="Transpoter"
                 android:textSize="28dp" />
@@ -113,6 +118,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="2dp"
+                android:layout_marginBottom="20dp"
+
                 android:gravity="left"
                 android:text="Lorem ipsum dolor sit amet,consectetur adipiscing" />
 

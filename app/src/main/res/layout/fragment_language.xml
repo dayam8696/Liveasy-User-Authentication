@@ -43,17 +43,41 @@
         android:layout_marginTop="20dp"
         android:entries="@array/Languages"/>
 
-    <Button
-        android:id="@+id/btnlng"
-        android:layout_width="200dp"
+<androidx.cardview.widget.CardView
+    android:id="@+id/btnlng"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="30dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="NEXT"
-        android:textStyle="bold"
-        android:textSize="17dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
         android:background="@drawable/rectangle_shape"
-        />
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="NEXT"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
 
 
 
@@ -70,7 +94,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/first_wave"/>
 
-        <!-- Second Image (overlaps the first image) -->
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -62,13 +62,41 @@
             android:inputType="phone" />
     </LinearLayout>
 
-    <Button
+    <androidx.cardview.widget.CardView
         android:id="@+id/contbtn"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center"
-        android:layout_marginTop="23dp"
-        android:background="@drawable/rectangle_shape"
-        android:text="CONTINUE" />
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_shape"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="CONTINUE"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

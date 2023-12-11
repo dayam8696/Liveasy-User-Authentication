@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "781434849721",
+    "project_id": "liveasy-f668f",
+    "storage_bucket": "liveasy-f668f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781434849721:android:18fe1f315660cc7bec8e68",
+        "android_client_info": {
+          "package_name": "com.example.liveasy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfCqCUrPH2Qdl_YAN-L9xeAOBsX06hl6M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

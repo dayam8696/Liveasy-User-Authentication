@@ -17,123 +17,124 @@
         android:text="Please select your profile"
         android:textSize="22dp"
         android:textStyle="bold" />
-    
+
     <RadioGroup
-        android:layout_gravity="center"
         android:id="@+id/selectpro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/enter_num_box_frame"
-        android:orientation="horizontal">
+        android:padding="10dp"
+        android:layout_gravity="center">
 
-
-        <RadioButton
-
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:checked="true" />
+            android:layout_marginTop="40dp"
+            android:background="@drawable/enter_num_box_frame"
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/profile_select" />
+            android:orientation="horizontal">
 
+
+            <RadioButton
+
+                android:id="@+id/shipper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:checked="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_gravity="center"
+                android:src="@drawable/profile_select" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shipper"
+                    android:textSize="28dp" />
+
+
+                <TextView
+                    android:layout_width="248dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Lorem ipsum dolor sit amet,consectetur adipiscing"
+
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/enter_num_box_frame"
+            android:orientation="horizontal">
 
-            <TextView
+
+            <RadioButton
+
+                android:id="@+id/Transpoter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:text="Shipper"
-                android:textSize="28dp" />
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
 
-
-            <TextView
-                android:layout_width="248dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="2dp"
-                android:gravity="left"
-                android:text="Lorem ipsum dolor sit amet,consectetur adipiscing"
-                android:layout_marginBottom="20dp"
 
                 />
 
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/enter_num_box_frame"
-        android:orientation="horizontal">
-
-
-        <RadioButton
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-
-
-            />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/truck" />
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:text="Transpoter"
-                android:textSize="28dp" />
+                android:layout_marginTop="20dp"
+                android:src="@drawable/truck" />
 
 
-            <TextView
-                android:layout_width="248dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
 
-                android:gravity="left"
-                android:text="Lorem ipsum dolor sit amet,consectetur adipiscing" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Transpoter"
+                    android:textSize="28dp" />
+
+
+                <TextView
+                    android:layout_width="248dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="20dp"
+
+                    android:gravity="left"
+                    android:text="Lorem ipsum dolor sit amet,consectetur adipiscing" />
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
-
-
-    </LinearLayout>
 
 
     </RadioGroup>

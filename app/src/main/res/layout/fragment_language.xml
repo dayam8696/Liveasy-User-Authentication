@@ -58,6 +58,29 @@
 
 
 
+    <FrameLayout
+        android:layout_marginTop="170dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- First Image -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/first_wave"/>
+
+        <!-- Second Image (overlaps the first image) -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/"/>
+
+    </FrameLayout>
+
+
+
+
 
 
 

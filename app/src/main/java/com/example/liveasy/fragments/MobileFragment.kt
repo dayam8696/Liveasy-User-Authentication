@@ -85,10 +85,11 @@ class MobileFragment : BaseFragment() {
             .setCallbacks(object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                 override fun onVerificationCompleted(credential: PhoneAuthCredential) {
 //                    verifyOtp(credential)
-//                    binding.progressBar.visibility = View.GONE
+                    binding.progressBar.visibility = View.GONE
                 }
 
                 override fun onVerificationFailed(p0: FirebaseException) {
+                    Log.d("verification", "onVerificationFailed: ${p0.localizedMessage}")
                     showToast("Too many requests \nTry again after some time")
 //                    binding.progressBar.visibility = View.GONE
                 }
@@ -100,8 +101,10 @@ class MobileFragment : BaseFragment() {
                     super.onCodeSent(p0, forceResendingToken)
                     verificationCode = p0
                     resendingToken = forceResendingToken
+                    Log.d("verification", "onVerificationFailed: ${p0}")
+
 //                    isResend = true
-//                    binding.verifyOtp.visibility = View.VISIBLE
+                  binding.progressBar.visibility = View.VISIBLE
                     showToast("OTP Sent Successfully")
                     findNavController().navigate(R.id.action_mobileFragment_to_verifyFragment3)
 //                    binding.progressBar.visibility = View.GONE

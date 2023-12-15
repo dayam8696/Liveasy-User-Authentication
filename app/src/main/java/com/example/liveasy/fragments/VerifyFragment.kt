@@ -60,7 +60,8 @@ class VerifyFragment :BaseFragment() {
 //                isOtpVerified = true
 //                binding.verifyOtp.visibility = View.GONE
                 showToast("OTP Verified Successfully")
-//                binding.progressBar.visibility = View.GONE
+
+//               binding.progressBar.visibility = View.GONE
 //                binding.resendTimer.visibility = View.GONE
             } else {
                 showToast("OTP Verification Failed")

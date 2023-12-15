@@ -20,5 +20,11 @@ class ProfileSelectFragment : BaseFragment() {
 
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.selectpro.setOnCheckedChangeListener { group, checkedId ->
+
+        }
+    }
 
 }

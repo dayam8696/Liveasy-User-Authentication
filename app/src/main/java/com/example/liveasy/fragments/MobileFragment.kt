@@ -65,8 +65,8 @@ open class MobileFragment : BaseFragment()  {
                 binding.countryCode.selectedCountryCode,
                 binding.editTextPhoneNumber.text.toString().trim()
             )
-//            findNavController().navigate(R.id.action_mobileFragment_to_verifyFragment3)
-        } else showToast("not ok")
+
+        } else showToast("Please Enter the Valid NUmber")
     }
 
     private fun isPhoneNumberValid(phoneNumber: String, countryCode: String): Boolean {
@@ -88,14 +88,13 @@ open class MobileFragment : BaseFragment()  {
             .setActivity(requireActivity())
             .setCallbacks(object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                 override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-//                    verifyOtp(credential)
-                   // binding.progressBar.visibility = View.GONE
+
                 }
 
                 override fun onVerificationFailed(p0: FirebaseException) {
                     Log.d("verification", "onVerificationFailed: ${p0.localizedMessage}")
                     showToast("Too many requests \nTry again after some time")
-//                    binding.progressBar.visibility = View.GONE
+
                 }
 
                 override fun onCodeSent(
@@ -107,13 +106,11 @@ open class MobileFragment : BaseFragment()  {
                     resendingToken = forceResendingToken
                     Log.d("verification", "onVerificationFailed: ${p0}")
 
-//                    isResend = true
-               //   binding.progressBar.visibility = View.VISIBLE
+
                     showToast("OTP Sent Successfully")
                     mobileNo = binding.editTextPhoneNumber.text.toString()
                     findNavController().navigate(R.id.action_mobileFragment_to_verifyFragment3)
-//                    binding.progressBar.visibility = View.GONE
-//                    startResendTimer()
+
                 }
             })
 

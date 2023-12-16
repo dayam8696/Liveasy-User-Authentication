@@ -38,16 +38,7 @@ open class VerifyFragment :BaseFragment() {
     }
 
     private fun setupClickListeners() {
-//        binding.verifycontbtn.setOnClickListener {
-//            val credential = PhoneAuthProvider.getCredential(
-        //        MobileFragment.verificationCode
-//               binding.verifycontbtn.setOnClickListener {
-//                   findNavController().navigate(R.id.action_verifyFragment3_to_profileSelectFragment)
-//               }
 
-//            )
-//
-//        }
 
         binding.otpView.setOtpCompletionListener {otp->
             Log.d("Actual Value", otp)
@@ -67,20 +58,18 @@ open class VerifyFragment :BaseFragment() {
     }
 
     private fun verifyOtp(credential: PhoneAuthCredential) {
-//        binding.progressBar.visibility = View.VISIBLE
+
 
         mAuth.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful) {
-//                isOtpVerified = true
-//                binding.verifyOtp.visibility = View.GONE
+
                 showToast("OTP Verified Successfully")
 
 
-//               binding.progressBar.visibility = View.GONE
-//                binding.resendTimer.visibility = View.GONE
+
             } else {
                 showToast("OTP Verification Failed")
-//                binding.progressBar.visibility = View.GONE
+
             }
         }
     }

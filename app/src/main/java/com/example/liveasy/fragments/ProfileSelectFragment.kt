@@ -44,9 +44,6 @@ class ProfileSelectFragment : BaseFragment() {
         transporterRadioButton.text = spannableTransporter
 
 
-//        binding.selectpro.setOnCheckedChangeListener { group, checkedId ->
-//
-//        }
     }
 
 }

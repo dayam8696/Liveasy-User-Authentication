@@ -36,5 +36,4 @@ class LanguageFragment : BaseFragment() {
     }
 
 
-
 }

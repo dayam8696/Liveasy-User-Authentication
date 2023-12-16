@@ -17,6 +17,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/phone"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -28,7 +29,7 @@
         android:id="@+id/otp_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="32dp"
         android:inputType="number"
         android:layout_gravity="center"
         android:itemBackground="@drawable/otp_box_shape"
@@ -111,6 +112,28 @@
 
 
     </androidx.cardview.widget.CardView>
+
+
+    <FrameLayout
+        android:layout_marginTop="180dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/wave_verifylight"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/wave_verifydark"/>
+
+    </FrameLayout>
+
 
 
 </LinearLayout>

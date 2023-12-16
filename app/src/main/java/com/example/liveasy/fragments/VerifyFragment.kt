@@ -13,10 +13,13 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
 
-class VerifyFragment :BaseFragment() {
+open class VerifyFragment :BaseFragment() {
     private val binding by lazy { FragmentVerifyPageBinding.inflate(layoutInflater) }
 
     private val mAuth = FirebaseAuth.getInstance()
+    companion object{
+        lateinit var binding: FragmentVerifyPageBinding
+    }
 
 
     override fun onCreateView(
@@ -30,13 +33,18 @@ class VerifyFragment :BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupClickListeners()
+
+        binding.phone.text = "Code is sent to ${MobileFragment.mobileNo}"
     }
 
     private fun setupClickListeners() {
 //        binding.verifycontbtn.setOnClickListener {
 //            val credential = PhoneAuthProvider.getCredential(
-//                MobileFragment.verificationCode,
-//                binding.otpView.
+        //        MobileFragment.verificationCode
+//               binding.verifycontbtn.setOnClickListener {
+//                   findNavController().navigate(R.id.action_verifyFragment3_to_profileSelectFragment)
+//               }
+
 //            )
 //
 //        }
@@ -49,7 +57,13 @@ class VerifyFragment :BaseFragment() {
             )
 
             verifyOtp(credential)
+            binding.verifycontbtn.setOnClickListener {
+                findNavController().navigate(R.id.action_verifyFragment3_to_profileSelectFragment)
+            }
+
         }
+
+
     }
 
     private fun verifyOtp(credential: PhoneAuthCredential) {
@@ -60,6 +74,7 @@ class VerifyFragment :BaseFragment() {
 //                isOtpVerified = true
 //                binding.verifyOtp.visibility = View.GONE
                 showToast("OTP Verified Successfully")
+
 
 //               binding.progressBar.visibility = View.GONE
 //                binding.resendTimer.visibility = View.GONE

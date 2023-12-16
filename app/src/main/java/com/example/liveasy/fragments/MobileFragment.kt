@@ -18,7 +18,7 @@ import com.google.i18n.phonenumbers.PhoneNumberUtil
 import com.google.i18n.phonenumbers.Phonenumber
 import java.util.concurrent.TimeUnit
 
-class MobileFragment : BaseFragment() {
+open class MobileFragment : BaseFragment()  {
     private val binding by lazy { FragmentMobileBinding.inflate(layoutInflater) }
     private val mAuth = FirebaseAuth.getInstance()
 
@@ -27,6 +27,7 @@ class MobileFragment : BaseFragment() {
     companion object {
         lateinit var verificationCode: String
         lateinit var resendingToken: PhoneAuthProvider.ForceResendingToken
+        lateinit var mobileNo: String
     }
 
     override fun onCreateView(
@@ -40,15 +41,18 @@ class MobileFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupClicklisteneres()
-//        binding.contbtn.setOnClickListener {
-//            findNavController().navigate(R.id.action_mobileFragment_to_verifyFragment3)
-//        }
+
     }
 
     private fun setupClicklisteneres() {
         binding.contbtn.setOnClickListener {
+
             sendOtpAndNavigate()
         }
+
+
+
+
     }
 
     private fun sendOtpAndNavigate() {
@@ -85,7 +89,7 @@ class MobileFragment : BaseFragment() {
             .setCallbacks(object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                 override fun onVerificationCompleted(credential: PhoneAuthCredential) {
 //                    verifyOtp(credential)
-                    binding.progressBar.visibility = View.GONE
+                   // binding.progressBar.visibility = View.GONE
                 }
 
                 override fun onVerificationFailed(p0: FirebaseException) {
@@ -104,8 +108,9 @@ class MobileFragment : BaseFragment() {
                     Log.d("verification", "onVerificationFailed: ${p0}")
 
 //                    isResend = true
-                  binding.progressBar.visibility = View.VISIBLE
+               //   binding.progressBar.visibility = View.VISIBLE
                     showToast("OTP Sent Successfully")
+                    mobileNo = binding.editTextPhoneNumber.text.toString()
                     findNavController().navigate(R.id.action_mobileFragment_to_verifyFragment3)
 //                    binding.progressBar.visibility = View.GONE
 //                    startResendTimer()
